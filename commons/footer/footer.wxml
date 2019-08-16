@@ -1,0 +1,1 @@
+<view class="zan-font-14" bindtap="call" style="text-align:center;color:#606060;position:absolute;bottom:100rpx;width:100%">服务热线：{{phoneNumber}}</view>
