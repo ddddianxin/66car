@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="tc">
+    <image class="logo" mode="aspectFit" src="../../images/superCar662.png"></image>
+  </view>
+  <view class="ml15 mr15">
+    <view class="call" bindtap='call'>拨打客服热线</view>
+    <button class="contact" open-type='contact'>联系在线客服</button>
+  </view>
+  <view class="tc">
+    <image class="qrcode" mode="aspectFit" src="../../images/qrcode.jpg"></image>
+  </view>
+  <view class="f12 color6 tc mt15">厦门青藤信息科技有限公司</view>
+</view>

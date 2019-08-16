@@ -1,0 +1,41 @@
+/* pages/index/list.wxss */
+page{
+  background-color:#212026;
+}
+/* tab */
+.tab{
+  background-color: #212026;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding:0 15px;
+}
+.tabBtn{
+  font-size: 14px;
+  color:#fff;
+  text-align: center;
+  padding:5px;
+}
+.tabBtn.active{
+  border-bottom:2px solid #ffd98d;
+  color:#ffd98d;
+}
+/* select */
+.select{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border-bottom:1px solid #212026;
+  font-size: 12px;
+  line-height: 40px;
+  background-color: #1a1a1c;
+  padding:0 15px;
+}
+.selectBtn{
+  text-align: center;
+  color:#fff;
+}
+.selectBtn.active{
+  color:#ffd98d;
+}
+

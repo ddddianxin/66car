@@ -1,0 +1,30 @@
+<!--pages/index/list.wxml-->
+<view class="container">
+  <view class="tab">
+    <view class="tabBtn {{type==1?'active':''}}" data-type="1"  bindtap="toList">时租</view>
+    <view class="tabBtn {{type==2?'active':''}}" data-type="2" bindtap="toList">日租</view>
+    <view class="tabBtn {{type==3?'active':''}}" data-type="3" bindtap="toList">月租</view>
+  </view>
+  <view class="select">
+    <view class="selectBtn active">综合排序</view>
+    <view class="selectBtn">价格低到高</view>
+    <view class="selectBtn">价格高到低</view>
+  </view>
+
+
+  <view class="list">
+    <scroll-view scroll-y='true' style="height:{{height}}px">
+      <view class="item" wx:for="{{list}}" data-id="{{item.id}}" wx:key="{{index}}" style="height:{{(height/6)-1}}px;line-height:{{(height/6)-1}}px;margin-top:10px;" bindtap="toDetail">
+        <image class="img" src="{{item.img}}" mode="aspectFill"></image>
+        <view class="info">
+          <view class="tit wto">{{item.name}}</view>
+          <view class="keyword">
+            <view class="k_text"  wx:for="{{item.sign}}" wx:for-index="key" wx:key="{{index}}">{{item}}</view>
+          </view>
+          <view class="price">{{item.price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+

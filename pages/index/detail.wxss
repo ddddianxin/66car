@@ -1,0 +1,243 @@
+/* pages/index/detail.wxss */
+page{
+  background-color:#212026;
+}
+/* 轮播图 */
+.advSwiper{
+  width:100%;
+  height:240px;
+}
+.advBox{
+  width:100%;
+}
+
+.advImg{
+  width:100%;
+  height:240px;
+}
+
+.homeIcon{
+  background-color: #fff;
+  display: flex;
+  width:100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.iconItem{
+  width:20%;
+  padding:5px 0 10px 0;
+}
+.iconItem image{
+  width:100%;
+  max-height: 240rpx;
+}
+.iconItem label{
+  width:100%;
+  text-align: center;
+  font-size:12px;
+  display: block;
+  margin-top:-5px;
+}
+/* 信息 */
+.d_info{
+  padding:10px 15px;
+}
+.d_title{
+  font-size: 16px;
+  color:#fff;
+}
+.d_keyword{
+  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin:5px 0;
+}
+.d_kw_item{
+  color:#999;
+  background-color:#494949;
+  padding:3px 10px;
+  margin-right:5px;
+  border-radius: 3px;
+}
+.d_price{
+  color:#ffd98d;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* 日历 */
+.calendar{
+  padding:15px;
+  background-color: #1a1a1c;
+  margin-bottom: 15px;
+}
+.calendar .h2Title{
+  margin-bottom:0px;
+}
+.dateBox .inbox{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.start,.end{
+  width:50%;
+}
+.is_tit{
+  text-align: center;
+  color:#fff;
+  font-size: 14px;
+  margin:10px 0 5px 0;
+}
+.is_time{
+  font-size:12px;
+  text-align: center;
+  color:#ffd98d;
+  margin-bottom:5px;
+}
+.totalTime{
+  color:#999;
+  font-size: 10px;
+  padding:5px 0 0 0;
+  border-top:1px solid #212026;
+  width:100%;
+  text-align: center;
+}
+/* 时间选择器 */
+.zan-popup{
+  visibility:hidden;
+}
+.zan-popup--show{
+  visibility:visible;
+}
+.zan-popup--show .zan-popup__mask {
+  display:block;
+}
+.zan-popup__mask{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:10;
+  background:rgba(0,0,0,.7);
+  display:none;
+}
+.zan-popup__container{
+  transform:translate3d(0,0,0);
+  top:auto;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:200px;
+  position:fixed;
+  background-color:#fff;
+  transform-origin:center;
+  transition:all .4s ease;
+  z-index:11;
+}
+.zan-cell{
+  position:relative;
+  padding:12px 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items:center;
+  line-height:1.4;
+  font-size:14px;
+}
+.picker-view-example{
+  height:120px;
+}
+picker-view-column {
+  -webkit-flex:1;
+  flex:1;
+  position:relative;
+  z-index:0;
+  height:100%;
+  overflow:hidden;
+}
+.picker-view-column-example{
+  line-height: 50px;
+  text-align: center;
+}
+
+
+/* 详细信息 */
+.intro{
+  padding:15px;
+  background-color: #1a1a1c;
+}
+.photo{
+  width:100%;
+}
+.photo image{
+  width:100%;
+}
+
+/* 底部导航 */
+.bottomNav{
+  height:50px;
+  width:100%;
+  background-color:#1a1a1c;
+  display: flex;
+  flex-direction:row;
+  line-height:50px;
+  position:fixed;
+  bottom:0px;
+  border-top:1px solid #1a1a1c;
+}
+.btmNav-btn{
+  width:60px;
+  background-color:#1a1a1c;
+  position: relative;
+  text-align: center;
+}
+.btmNav-btn image{
+  width:30px;
+  height:30px;
+  padding:0 10px;
+}
+
+.home-text{
+  font-size:12px;
+  width:100%;
+  padding:0;
+  height:20px;
+  position: absolute;
+  left:0;
+  bottom:16px;
+  color:#fff;
+}
+
+.bNav-btn{
+  background-color: #ffd98d;
+  color:#fff;
+  border:none;
+  border-radius: 0;
+  width:100%;
+  font-size: 0;
+}
+
+.phoneTxt{
+  display: inline-block;
+  font-size:18px;
+  color:#333;
+}
+
+.btnShare{
+  background-color: #1a1a1c;
+  padding:0;
+  color:#333;
+  height: 50px;
+}
+.btnShare image{
+  display: block;
+  padding-top:2px;
+}
+.btnShare .home-text{
+  display: block;
+  bottom:6px;
+}
+.btnShare::after{
+  border:none;
+}

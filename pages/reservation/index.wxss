@@ -1,0 +1,95 @@
+/* pages/reservation/index.wxss */
+page{
+  background-color:#212026;
+}
+.box{
+  margin-top:15px;
+  background-color: #1a1a1c;
+  padding:0;
+}
+.inbox{
+  margin:0 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.r_img{
+  width:160px;
+  max-height: 80px;
+}
+.r_tit{
+  color:#fff;
+  font-size: 14px;
+  padding:5px 0 0 15px;
+  width:100%;
+}
+.r_name{
+  height: 48px;
+}
+.r_tit text{
+  display: block;
+}
+/* 时间 */
+.start,.end{
+  width:50%;
+}
+.is_tit{
+  text-align: center;
+  color:#fff;
+  font-size: 14px;
+  margin:10px 0 5px 0;
+}
+.is_time{
+  font-size:12px;
+  text-align: center;
+  color:#ffd98d;
+  margin-bottom:5px;
+}
+.totalTime{
+  color:#999;
+  font-size: 10px;
+  padding:5px 0 15px 0;
+  border-top:1px solid #212026;
+  width:100%;
+  text-align: center;
+}
+/* 其他 */
+.it_Tit{
+  color:#fff;
+  font-size:14px;
+  width:150px;
+  text-align: left;
+  line-height: 40px;
+}
+.it_Text{
+  line-height: 36px;
+  font-size: 14px;
+  color:#fff;
+}
+.it_Text.colorY{
+  color:#ffd98d;
+}
+/* 支付 */
+.pay{
+  height:50px;
+  width:100%;
+  position:fixed;
+  bottom:0px;
+  background-color:#1a1a1c;
+  display: flex;
+  flex-direction:row;
+  line-height:50px;
+  justify-content: space-between;
+  font-size: 16px;
+  z-index: 500;
+  color:#fff;
+}
+.payBtn{
+  background-color: #09bb07;
+  color:#fff;
+  text-align: center;
+  width:150px;
+  height: 50px;
+  margin:0;
+  border-radius:0;
+}

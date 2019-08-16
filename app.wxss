@@ -1,0 +1,435 @@
+
+.container {
+  /* background: #F9F9F9;
+  padding: 0 0;
+  display:flex;
+  flex-direction:column;
+  box-sizing:border-box; */
+} 
+
+.container::before {
+  width: 100%;
+  height: 1rpx;
+  background-color: #e2e2e2;
+  z-index: 5;
+}
+.zan-row{
+  width:100%;
+}
+.theme-background-color{
+  background-color:#FABE00
+}
+.theme-color{
+  color:#FABE00
+}
+.colorY{
+  color:#ffd98d;
+}
+.padding-20{
+  padding:20rpx;
+}
+.hide{
+  display: none;
+}
+.right_button_1 {
+  position:fixed;
+  right:20rpx;
+  bottom:30rpx;
+  width:80rpx;
+  height:80rpx;
+  text-align:center;
+  line-height:80rpx;
+  background:black;
+  opacity:0.6;
+  color:#fff;
+  border-radius:50%;
+  font-size:27rpx;
+  padding:0;
+  
+  }
+.right_button_1 image {
+  width:70rpx;
+  height:70rpx;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+}
+.right_button_2{
+  position:fixed;
+  right:20rpx;
+  bottom:120rpx;
+  width:80rpx;
+  height:80rpx;
+  text-align:center;
+  line-height:80rpx;
+  background:black;
+  opacity:0.6;
+  color:#fff;
+  border-radius:50%;
+  font-size:27rpx;
+  padding:0;
+} 
+.right_button_2 image {
+  width:70rpx;
+  height:70rpx;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+}
+.right_button_3{
+  position:fixed;
+  right:20rpx;
+  bottom:210rpx;
+  width:80rpx;
+  height:80rpx;
+  text-align:center;
+  line-height:80rpx;
+  background:black;
+  opacity:0.6;
+  color:#fff;
+  border-radius:50%;
+  font-size:27rpx;
+  padding:0;
+} 
+.right_button_3 image {
+  width:70rpx;
+  height:70rpx;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+}
+.right_button_4{
+  position:fixed;
+  right:20rpx;
+  bottom:300rpx;
+  width:80rpx;
+  height:80rpx;
+  text-align:center;
+  line-height:80rpx;
+  background:black;
+  opacity:0.6;
+  color:#fff;
+  border-radius:50%;
+  font-size:27rpx;
+  padding:0;
+} 
+.right_button_4 image {
+  width:70rpx;
+  height:70rpx;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.w{
+  width:100%;
+}
+
+.z10{
+  z-index:10;
+}
+.line{
+  width:100%;
+  border-bottom:1px solid #ddd;
+}
+
+.box{
+  margin-top:10px;
+  padding:10px 0;
+  width:100%;
+  background-color:#fff;
+}
+/* border-top:1px solid #ddd;
+border-bottom:1px solid #ddd; */
+
+.ofh{
+  overflow:hidden;
+}
+
+.fl{
+  float:left;
+}
+
+.fr{
+  float:right;
+}
+
+.f10{
+  font-size:10px;
+}
+
+.f12{
+  font-size:12px;
+}
+
+.f14{
+  font-size:14px;
+}
+
+.f16{
+  font-size:16px;
+}
+
+.color3{
+  color:#333;
+}
+
+.color6{
+  color:#666;
+}
+
+.color9{
+  color:#999;
+}
+.colorred{
+  color:#E31436;
+}
+
+.colorgreen{
+  color:#097c25;
+}
+
+.colorblue{
+  color:#0e79cc;
+}
+
+.colororange{
+  color:#fa9524;
+}
+
+.pl5{padding-left:5px;}
+
+.pr5{padding-right:5px;}
+
+.pl10{padding-left:10px;}
+
+.pr10{padding-right:10px;}
+
+.pl15{padding-left:15px;}
+
+.pr15{padding-right:15px;}
+
+.pt15{padding-top:15px;}
+
+.pb15{padding-bottom:15px;}
+
+.pb55{padding-bottom:55px;}
+
+.pb0{padding-bottom:0;}
+
+.ml5{margin-left:5px;}
+
+.mr5{margin-right:5px;}
+
+.ml10{margin-left:10px;}
+
+.mr10{margin-right:10px;}
+
+.mt10{margin-top:10px;}
+
+.mb10{margin-bottom:10px;}
+
+.ml15{margin-left:15px;}
+
+.mr15{margin-right:15px;}
+
+.mt15{margin-top:15px;}
+
+.mb15{margin-bottom:15px;}
+
+.mb0{margin-bottom:0;}
+
+.mr30{margin-right:30px;}
+
+.mt30{margin-top:30px;}
+
+.mb50{margin-bottom:50px;}
+
+.tl{text-align:left}
+
+.tc{text-align:center}
+
+.tr{text-align:right}
+
+.fb{font-weight: bold;}
+
+.pr{position:relative}
+
+.pa{position:absolute}
+
+.wto {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btGray{
+  border-bottom:1px solid #212026;
+}
+
+.brGray{
+  border-right:1px solid #e5e5e5;
+}
+
+.btn-area{
+  width:100%;
+  padding:20px 0;
+}
+.btn-area button{
+  margin-bottom: 10px;
+}
+
+.blue-btn{
+  background-color:#0e79cc;
+  color:#fff;
+}
+
+.green-btn{
+  background-color:#009933;
+  color:#fff;
+}
+
+.headTit{
+  font-size:14px;
+  font-weight: bold;
+  text-align: center;
+}
+.headTit text{
+  font-weight: normal;
+  padding:15px;
+  color:#d6d6db;
+}
+
+.bLine{
+  border-bottom:1px solid #e5e5e5;
+}
+
+.bLine:last-child{
+  border-bottom:none;
+}
+
+/* 产品展示 */
+.good-box{
+  display:flex;
+  flex-wrap:nowrap;
+  padding:10px 0;
+  margin:0 15px;
+  border-bottom:1px solid #d6d6db;
+}
+
+.good-box:last-child{
+  border-bottom:none;
+}
+
+.pic{
+  width:60px;
+  background-color: #fff;
+}
+
+.pic image{
+  width:60px;
+  height:60px;
+}
+
+.info{
+  width:78%;
+  display:block;
+  padding-left:15px;
+  font-size: 0;
+}
+
+.ch-tit{
+  font-size:14px;
+  line-height: 20px;
+}
+.en-tit{
+  font-size:12px;
+  color:#999;
+  margin:3px 0 5px 0;
+  width:100%;
+  
+}
+.cas{
+  background-color:#0e79cc;
+  color:#fff;
+  font-size:12px;
+  padding:0px 10px 0px 5px;
+  border-radius:0 10px 10px 0;
+  height:20px;
+  line-height: 20px;
+  display: inline-block;
+}
+
+.arrow{
+  width:8px;
+  height: 15px;
+}
+
+
+.noData{
+  min-height:500px;
+  padding-top:20px;
+}
+
+.h2Title{
+  font-size: 14px;
+  color:#fff;
+  border-left:5px solid #ffd98d;
+  padding-left: 10px;
+  font-size: bold;
+  margin-bottom:15px;
+} 
+
+
+
+/* 车型列表 */
+.item{
+  background-color: #1a1a1c;
+  height: 80px;
+  padding:0 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 1px;
+  justify-content: space-around;
+}
+.img{
+  width:400rpx;
+  height: 100%;
+}
+.info{
+  padding:5px 0 5px 15px;
+  width: 100%;
+}
+.tit{
+  color:#fff;
+  font-size: 14px;
+  display: block;
+  margin-bottom:5px;
+  max-width: 400rpx;
+}
+.keyword{
+  font-size: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom:5px;
+}
+.k_text{
+  color:#999;
+  background-color:#212026;
+  padding:3px 5px;
+  margin-right:5px;
+  border-radius: 3px;
+}
+.price{
+  text-align: right;
+  color:#ffd98d;
+  width:100%;
+  font-size: 14px;
+}

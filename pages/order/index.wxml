@@ -1,0 +1,26 @@
+<view class="container">
+  <!-- tab -->
+  <view class="tabNav">
+    <view class="tabItem active">全部</view>
+    <view class="tabItem">进行中</view>
+    <view class="tabItem">待支付</view>
+    <view class="tabItem">已完成</view>
+  </view>
+  <!-- 列表 -->
+  <view class="list">
+    <scroll-view scroll-y='true' style="height:{{height}}px">
+      <view class="item" wx:for="{{list}}" data-id="{{item.id}}" wx:key="{{index}}" style="height:{{(height/6)-1}}px;line-height:{{(height/6)-1}}px;margin-top:10px;" bindtap="toDetail">
+        <image class="img" src="{{item.img}}" mode="aspectFill"></image>
+        <view class="info">
+          <view class="tit wto">{{item.name}}</view>
+          <view class="rentDate">11月10日12:00 - 11月10日12:00</view>
+          <view class="o_df">
+            <view class="rent">租期 3天</view>
+            <view class="price">{{item.price}}</view>
+          </view>
+          
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

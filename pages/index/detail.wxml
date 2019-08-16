@@ -1,0 +1,135 @@
+<!--pages/index/detail.wxml-->
+<view class="container pb55">
+  <!-- 轮播图 -->
+  <swiper class="advSwiper" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" circular="true" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item class="advBox">
+        <image class="advImg" src="{{imgUrls[index]}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 信息 -->
+  <view class="d_info">
+    <view class="d_title">敞篷兰博基尼 LP560-4</view>
+    <view class="d_keyword">
+      <view class="d_kw_item">自动化</view>
+      <view class="d_kw_item">2座</view>
+      <view class="d_kw_item">1.7</view>
+    </view>
+    <view class="d_price">￥125615/天</view>
+  </view>
+  <!-- 日历 -->
+  <!-- <view class="box">
+    <view class="inbox">
+      <view class="start">
+        <view class="is_tit">取车</view>
+        <view class="is_time">3月28日 19:00</view>
+      </view>
+      <view class="end">
+        <view class="is_tit">还车</view>
+        <view class="is_time">3月28日 19:00</view>
+      </view>
+    </view>
+    <view class="inbox">
+      <view class="totalTime">用车总时间6天22小时</view>
+    </view>
+  </view> -->
+
+
+  <view class="calendar">
+    <view class="h2Title">可预订日期</view>
+    <view class="dateBox">
+      <view class="inbox" bindtap="handleDateFieldClick">
+        <view class="start">
+          <view class="is_tit">取车</view>
+          <view class="is_time">{{ pickerViewConfig1.year[pickerViewConfig1.value[0]].Date }} {{pickerViewConfig1.year[pickerViewConfig1.value[0]].Week}} {{ pickerViewConfig1.time[pickerViewConfig1.value[1]]}}</view>
+        </view>
+        <view class="end">
+          <view class="is_tit">还车</view>
+          <view class="is_time">{{ pickerViewConfig2.year[pickerViewConfig2.value[0]].Date }} {{pickerViewConfig2.year[pickerViewConfig2.value[0]].Week}} {{ pickerViewConfig2.time[pickerViewConfig2.value[1]]}}</view>
+        </view>
+      </view>
+      <view class="inbox">
+        <view class="totalTime">用车总时间{{useTime}}{{type==1?'小时':type==2?'天':'个月'}}</view>
+      </view>
+    </view>
+    <!-- 取车时间选择 -->
+    <view class="zan-popup {{ pickerViewConfig1.show ? 'zan-popup--show' : ''}}">
+      <view class="zan-popup__mask" bindtap="hideDatePopup"></view>
+      <view class="zan-popup__container popup-field-example--bottom">
+        <view class="zan-cell">
+          <view class="zan-col zan-col-8" style="color:#D8D8D8;" bindtap="cancel1">取消</view>
+          <view class="zan-col zan-col-8" style="text-align: center;">取车时间</view>
+          <view class="zan-col zan-col-8" style="text-align: right;color:#FF9966;" bindtap="ok1">确定</view>
+        </view>
+
+        <picker-view value="{{ pickerViewConfig1.value }}" indicator-style="height: 50px;" class="picker-view-example" bindchange="handlePopupDateChange">
+          <picker-view-column>
+            <view class="picker-view-column-example" wx:for="{{ pickerViewConfig1.year }}" wx:key="{{index}}">{{item.DateStr}}</view>
+          </picker-view-column>
+          <picker-view-column >
+            <view class="picker-view-column-example" wx:for="{{ pickerViewConfig1.time }}" wx:key="{{index}}">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </view>
+
+    <!-- 二项选择 -->
+    <view class="zan-popup zan-popup--bottom {{ pickerSecond.show ? 'zan-popup--show' : ''}}">
+      <view class="zan-popup__mask" bindtap="hideDatePopup2"></view>
+      <view class="zan-popup__container popup-field-example--bottom">
+        <view class="zan-cell">
+          <view class="zan-col zan-col-8" style="color:#D8D8D8;" bindtap="cancel2">取消</view>
+          <view class="zan-col zan-col-8" style="text-align: center;">选择时间</view>
+          <view class="zan-col zan-col-8" style="text-align: right;color:#FF9966;" bindtap="ok2">确定</view>
+        </view>
+        <!-- 小时选择 -->
+        <picker-view wx:if="{{type==1}}" value="{{ pickerSecond.value }}" indicator-style="height: 50px" class="picker-view-example" bindchange="choiceHours">
+          <picker-view-column>
+            <view class="picker-view-column-example" wx:for="{{ pickerSecond.hours }}" wx:key="{{index}}">{{item}}小时</view>
+          </picker-view-column>
+        </picker-view>
+        <!-- 天数选择 -->
+        <picker-view wx:if="{{type==2}}" value="{{ pickerSecond.value }}" indicator-style="height: 50px" class="picker-view-example" bindchange="choiceDays">
+          <picker-view-column>
+            <view class="picker-view-column-example" wx:for="{{ pickerSecond.days }}" wx:key="{{index}}">{{item}}天</view>
+          </picker-view-column>
+        </picker-view>
+        <!-- 月数选择 -->
+        <picker-view wx:if="{{type==3}}" value="{{ pickerSecond.value }}" indicator-style="height: 50px" class="picker-view-example" bindchange="choiceMonths">
+          <picker-view-column>
+            <view class="picker-view-column-example" wx:for="{{ pickerSecond.months }}" wx:key="{{index}}">{{item}}个月</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 详细信息 -->
+  <view class="intro">
+    <view class="h2Title">详细介绍</view>
+    <view class="photo" wx:for="{{imgUrls}}" wx:key="index" wx:for-item="image">
+      <image mode="aspectFill" data-src="{{image[index]}}" bindtap="previewImg" src="{{image}}"></image>
+    </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class="bottomNav">
+    <view class="btmNav-btn" bindtap='toHome'>
+      <image mode="aspectFit" src="../../images/nav/icon1.png"></image>
+      <view class="home-text">首页</view>
+    </view>
+    <view class="btmNav-btn">
+      <button class="btnShare" bindtap='call'>
+        <image mode="aspectFit" src="../../images/nav/icon3.png"></image>
+        <view class="home-text">客服</view>
+      </button>
+    </view>
+    <button class="bNav-btn" bindtap="toReservation">
+      <view class="phoneTxt">
+        立即预订
+      </view>
+    </button>
+
+  </view>
+</view>

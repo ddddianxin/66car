@@ -1,0 +1,47 @@
+/* pages/order/index.wxss */
+page{
+  background-color:#212026;
+}
+/* 菜单 */
+.tabNav{
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #1a1a1c;
+  justify-content: space-around;
+  padding:0px 15px;
+  color:#fff;
+  font-size: 14px;
+}
+.tabItem{
+  border-bottom:2px solid #1a1a1c;
+  padding:10px;
+}
+.tabItem.active{
+  border-bottom:2px solid #ffd98d;
+  color:#ffd98d;
+}
+/* 列表 */
+.info{
+  
+  padding:10px 0 15px 15px;
+}
+.rentDate{
+  font-size: 10px;
+  color:#999;
+  width:100%;
+  margin-bottom: 5px;
+}
+.rent{
+  font-size: 10px;
+  color:#999;
+  width:100%;
+}
+.price{
+  font-size: 12px;
+}
+.o_df{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width:100%;
+}

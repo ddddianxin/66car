@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<!-- 轮播图 -->
+  <swiper class="advSwiper" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" circular="true" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item class="advBox">
+        <image class="advImg" src="{{imgUrls[index]}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="menu">
+    <view class="menuBtn mr15" data-type="1" bindtap='toList'>
+      <image src="../../images/menu/menu1.png" mode="aspectFit"></image>
+    </view>
+    <view class="menuBtn mr15" data-type="2" bindtap='toList'>
+      <image src="../../images/menu/menu2.png" mode="aspectFit"></image>
+    </view>
+    <view class="menuBtn" data-type="3" bindtap='toList'>
+      <image src="../../images/menu/menu3.png" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <view class="homeList">
+    <view class="h2Title ml15">热租车型</view>
+      <view class="list">
+      <scroll-view scroll-y='true' style="height:{{height}}px">
+        <view class="item" wx:for="{{list}}" data-id="{{item.id}}" wx:key="{{index}}" style="height:{{(height/6)-1}}px;line-height:{{(height/6)-1}}px;margin-top:10px;" bindtap="toDetail">
+          <image class="img" src="{{item.img}}" mode="aspectFill"></image>
+          <view class="info">
+            <view class="tit wto">{{item.name}}</view>
+            <view class="keyword">
+              <view class="k_text"  wx:for="{{item.sign}}" wx:for-index="key" wx:key="{{index}}">{{item}}</view>
+            </view>
+            <view class="price">{{item.price}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>

@@ -1,0 +1,34 @@
+<view class="container">
+<login name="comp"/>
+  <!-- 基本信息 -->
+  <view class="ucCard">
+    <view class="top">
+      <view class="selfie">
+        <image mode="aspectFit" src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <view class="selfInfo">
+        <view class="nickname f14 mb5">{{userInfo.nickName}}</view>
+        <view class="address f12 colorY">{{userInfo.city+' '+userInfo.province}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 菜单 -->
+  <view class="ucMenu">
+    <view class="ucList" bindtap='toOrder'>
+      <view class="uc_tit">我的订单</view>
+      <view class="uc_text">
+        <image mode="aspectFit" src="../../images/arrow.png" class="arrow"></image>
+      </view>
+    </view>
+    <view class="ucList" bindtap="toContact">
+      <view class="uc_tit">联系我们</view>
+      <view class="uc_text">
+        <image mode="aspectFit" src="../../images/arrow.png" class="arrow"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 退出账号 -->
+  <view class="btn-area">
+    <button class="btn" bindtap="logout">退出账号</button>
+  </view>
+</view>

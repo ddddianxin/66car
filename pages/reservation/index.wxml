@@ -1,0 +1,81 @@
+<view class="container">
+  <view class="box">
+    <view class="inbox">
+      <image class="r_img" src="../../images/car/1672151642.jpg" mode="aspectFill"></image>
+      <view class="r_tit">
+        <text class="r_name">对方就看见过分过分</text>
+        <text class="colorY f14 mt5">￥245/天</text>
+      </view>
+    </view>
+  </view>
+  <!-- 时间 -->
+  <view class="box">
+    <view class="inbox">
+      <view class="start">
+        <view class="is_tit">取车</view>
+        <view class="is_time">3月28日 19:00</view>
+      </view>
+      <view class="end">
+        <view class="is_tit">还车</view>
+        <view class="is_time">3月28日 19:00</view>
+      </view>
+    </view>
+    <view class="inbox">
+      <view class="totalTime">用车总时间6天22小时</view>
+    </view>
+  </view>
+  <!-- 用户信息 -->
+  <view class="box">
+    <view class="inbox btGray">
+      <view class="it_Tit">联系人</view>
+      <view class="it_Text">
+        张三
+      </view>
+    </view>
+    <view class="inbox">
+      <view class="it_Tit">联系电话</view>
+      <view class="it_Text">
+        13800138000
+      </view>
+    </view>
+  </view>
+  
+  <!-- 合计 -->
+  <view class="box">
+    <view class="inbox btGray">
+      <view class="it_Tit">合计</view>
+      <view class="it_Text colorY">
+        ￥1515.00
+      </view>
+    </view>
+    <view class="inbox">
+      <view class="it_Tit">预付金（10%）</view>
+      <view class="it_Text colorY">
+        ￥151.00
+      </view>
+    </view>
+  </view>
+
+  <!-- 支付方式 -->
+  <view class="box">
+    <view class="inbox">
+      <view class="it_Tit">微信支付（默认）</view>
+      <view class="it_Text">
+        <radio class="radio ml15" value="微信支付" checked>
+          <text></text>
+        </radio>
+      </view>
+    </view>
+  </view>
+
+  <!-- 支付 -->
+  <view class="pay">
+    <view class="pl15 pr15">需支付：<text class="colorY">￥151.00元</text></view>
+    <button class="payBtn" formType="submit">支付</button>
+  </view>
+
+
+
+  
+  
+</view>

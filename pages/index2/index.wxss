@@ -1,0 +1,41 @@
+/**index.wxss**/
+page{
+  background-color:#212026;
+}
+.choiceBox{
+  border-radius: 5px;
+  background-color:#fff;
+  margin:15px;
+  overflow: hidden;
+}
+.zan-font-24{
+  font-size:48rpx;
+}
+.field__title--radius {
+  padding-bottom: 10px;
+}
+
+.popup-field-example--bottom {
+  width: 100%;
+  height: 150px;
+}
+
+.picker-view-example {
+  height: 120px;
+}
+
+.picker-view-column-example {
+  line-height: 50px;
+  text-align: center;
+}
+.triangle_border_down{
+  width:0;
+  height:0;
+  border-width:10rpx 10rpx 0;
+  border-style:solid;
+  border-color:#C0C0C0 transparent transparent;/*灰 透明 透明 */
+  position:relative;
+  top:25rpx;
+  left:10rpx;
+  float:left;
+}
