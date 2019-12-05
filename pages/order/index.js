@@ -9,32 +9,33 @@ Page({
     list: [
       {
         id: '01',
-        img: 'http://www.benson-car.com/upload/images/20160310/98948690.JPG',
-        name: '劳斯莱斯 曜影',
-        price: '￥1008'
+        img: '../../images/car/1672151654.jpg',
+        name: '法拉利地方的范德萨范德萨发多福多寿',
+        price: '￥654'
       },
       {
-        id: '02',img:'http://www.benson-car.com/upload/images/20190604/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2019060414313329534721.jpg',
-        name: '迈凯伦 720S',
-        price: '￥18000'
+        id: '01',
+        img: '../../images/car/1672151659.jpg',
+        name: '法拉利地方的范德萨范德萨发多福多寿',
+        price: '￥5858'
       },
       {
-        id: '03',
-        img: 'http://www.benson-car.com/upload/images/20190725/IMG_00175162078.jpg',
-        name: '法拉利 488',
-        price: '￥20000'
+        id: '01',
+        img: '../../images/car/1672151692.jpg',
+        name: '法拉利地方的范德萨范德萨发多福多寿',
+        price: '￥698'
       },
       {
-        id: '04',
-        img: 'http://www.benson-car.com/upload/images/20190725/15799947.jpg',
-        name: '劳斯莱斯 魅影',
-        price: '￥21000'
+        id: '01',
+        img: '../../images/car/1672151677.jpg',
+        name: '法拉利地方的范德萨范德萨发多福多寿',
+        price: '￥88'
       },
       {
-        id: '05',
-        img: 'http://www.benson-car.com/upload/images/20190711/IMG_0006_polarr_17807667.jpg',
-        name: '兰博基尼Urus',
-        price: '￥15000'
+        id: '01',
+        img: '../../images/car/1672151654.jpg',
+        name: '法拉利地方的范德萨范德萨发多福多寿',
+        price: '￥677'
       },
       {
         id: '01',

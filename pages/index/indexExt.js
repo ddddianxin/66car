@@ -1,11 +1,9 @@
 //日期与星期
-function getDateAndWeek(date,days) {
+function getDateAndWeek(date) {
   var d_w_list = [];
 
   for (var i = 0; i < 60; i++) {
-
-    var newDate = addDate(date,days);
-
+    var newDate = addDate(date);
     var date = getDate(newDate);
     var week = getWeek(newDate);
     var obj = {};
@@ -14,9 +12,6 @@ function getDateAndWeek(date,days) {
     obj.Date = date;
     obj.Week = week;
     obj.FullDate = newDate;
-    if(days==0){
-      d_w_list
-    }
     d_w_list.push(obj);
     date = newDate;
   }
@@ -50,32 +45,17 @@ function getWeek(date) {
     return "星期六";
   }
 }
-//日期+1天 20190403 修改：不进行默认+1天
+//日期+1天
 function addDate(date, days) {
-  
   if (days == undefined || days == '') {
     days = 1;
   }
   var date = new Date(date);
   date.setDate(date.getDate() + days);
-  
   var month = date.getMonth() + 1;
   var day = date.getDate();
-  
   return date.getFullYear() + '-' + getFormatDate(month) + '-' + getFormatDate(day);
 }
-
-
-// function addDate(date, days) {
-//   if (days == undefined || days == '') {
-//     days = 1;
-//   }
-//   var date = new Date(date);
-//   date.setDate(date.getDate() + days);
-//   var month = date.getMonth() + 1;
-//   var day = date.getDate();
-//   return date.getFullYear() + '-' + getFormatDate(month) + '-' + getFormatDate(day);
-// }
 // 日期月份/天的显示，如果是1位数，则在前面加上'0'
 function getFormatDate(arg) {
   if (arg == undefined || arg == '') {
@@ -92,74 +72,21 @@ function getFormatDate(arg) {
 
 //生成时间：9:30-22:00
 function getTimes() {
-  //获取当前时间
-  var myDate = new Date();
-  var hoursNow = myDate.getHours();
-  var hours = hoursNow + 4;//4 当前小时数+1+3（间隔数）
-  var minutes = "30";//30
+  var hours = 9;
+  var minutes = "30";
   var times = [];
-  var i=0
-  do {
-      var time = combination(hours, minutes);
-      if (i == 0) {
-        times.push(hours + ":" + "00");
-      }
-      times.push(time);
-      if (i == 0 || minutes == "30") {
-        hours = addHours(hours);
-      }
-      minutes = addMinutes(minutes);
-      i++;
+  for (var i = 0; i < 22; i++) {
+    var time = combination(hours, minutes);
+    times.push(time);
+    if (i == 0 || minutes == "30") {
+      hours = addHours(hours);
+    }
+    minutes = addMinutes(minutes);
+
+
   }
-  while (!(parseInt(minutes) == '00' && parseInt(hours)=='24'));
-
-  // for (var i = 0; i < 24 - hoursNow ; i++) {
-  //   var time = combination(hours, minutes);
-  //   if (i == 0) {
-  //     times.push(hours + ":" + "00");
-  //   }
-  //   times.push(time);
-  //   if (i == 0 || minutes == "30") {
-  //     hours = addHours(hours);
-  //   }
-  //   minutes = addMinutes(minutes);
-  //   console.log("hours")
-  //   console.log(hours)
-  //   console.log(minutes)
-  // }
-
   return times;
 }
-
-
-
-
-// function getTimes() {
-//   //获取当前时间
-//   var myDate = new Date();
-//   var hoursNow = myDate.getHours(); 
-//   var hours = hoursNow+4;//9 当前小时数+1+3（间隔数）
-//   var minutes = "30";//30
-//   var times = [];
-
-//   for (var i = 0; i < (24 - hours)*2+1; i++) {//i<24-hours
-//     var time = combination(hours, minutes);
-//     if(i ==0){
-//       times.push(hours + ":" + "00");
-//     }
-//     times.push(time);
-//     if (i == 0 || minutes == "30") {
-//       hours = addHours(hours);
-//     }
-//     minutes = addMinutes(minutes);
-
-//     console.log(i)
-//     console.log(hours)
-//     console.log(times)
-//   }
-
-//   return times;
-// }
 //组合成9:00
 function combination(hours, minutes) {
 
